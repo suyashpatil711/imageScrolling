@@ -37,6 +37,7 @@ public class ScrollMainClass {
 
 
     public class User{
+        private ProfImg profimgdata;
         String id;
         String name;
 
@@ -63,5 +64,53 @@ public class ScrollMainClass {
         public void setName(String name) {
             this.name = name;
         }
+
+        public void setProfImg(String small,String medium,String large){
+            this.profimgdata=new ProfImg(small, medium, large);
+
+        }
+        public ProfImg getProfImg(){
+            return profimgdata;
+
+        }
+        public class ProfImg {
+            String small;
+            String medium;
+            String large;
+
+            public ProfImg() {
+            }
+
+            public ProfImg(String small, String medium, String large) {
+                this.small = small;
+                this.medium = medium;
+                this.large = large;
+            }
+
+            public String getSmall() {
+                return small;
+            }
+
+            public void setSmall(String small) {
+                this.small = small;
+            }
+
+            public String getMedium() {
+                return medium;
+            }
+
+            public void setMedium(String medium) {
+                this.medium = medium;
+            }
+
+            public String getLarge() {
+                return large;
+            }
+
+            public void setLarge(String large) {
+                this.large = large;
+            }
+        }
+
     }
 }
